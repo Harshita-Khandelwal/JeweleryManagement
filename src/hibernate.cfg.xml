@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+	
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/JMS</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">admin</property>
+		<property name="hibernate.connection.pool_size">10</property>
+		
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="show_sql">true</property>
+
+		<property name="hbm2ddl.auto">update</property>
+		
+		<mapping class="com.model.AddItemModel" />
+		<mapping class="com.model.AddUserModel" />
+		<mapping class="com.model.AddStockModel" />
+		<mapping class="com.model.CustomerSellModel" />
+		
+	</session-factory>
+</hibernate-configuration>
